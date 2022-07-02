@@ -1,4 +1,17 @@
-html,
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "venus-rising-rg";
+  src: url("/fonts/venus-rising-rg.ttf");
+}
+
+.default-font {
+  font-family: "venus-rising-rg";
+}
+
+/* html,
 body {
   padding: 0;
   margin: 0;
@@ -13,4 +26,4 @@ a {
 
 * {
   box-sizing: border-box;
-}
+} */

@@ -135,7 +135,7 @@ class NepsClient {
   async getScoreBoard(competitionId: number): Promise<ScoreBoard> {
     let rawScoreBoard = await this.getScoreBoardPage(competitionId, 1);
 
-    for (let page = 2; ; page++) {
+    for (let page = 2; page < 3; page++) {
       const partialRawScoreBoard = await this.getScoreBoardPage(
         competitionId,
         page
