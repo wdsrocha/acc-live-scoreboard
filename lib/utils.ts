@@ -16,3 +16,5 @@ export function t(time: string): number {
 
   return answer;
 }
+
+export const SCOREBOARD_UPDATE_INTERVAL = 10_000;

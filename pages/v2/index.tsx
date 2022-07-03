@@ -78,12 +78,14 @@ const Home: NextPage = () => {
     title,
     points,
     penality,
+    data,
   }: {
     title: string;
     position: number;
     key: number;
     points: number;
     penality: number;
+    data: any;
   }) {
     const positionFontColor = position < 3 ? "text-green-800" : "text-white";
     const titleFontColor = position < 3 ? "text-white" : "text-green-800";
@@ -100,7 +102,7 @@ const Home: NextPage = () => {
           {title}
         </span>
         <span className={`default-font absolute ml-24 mt-10 ${titleFontColor}`}>
-          {points}/{penality}
+          {data.id} | {points}/{penality}
         </span>
         <img
           src={`/images/user_${position < 3 ? "top3" : "normal"}.png`}
@@ -139,6 +141,7 @@ const Home: NextPage = () => {
                 title={getTitle(x.id)}
                 points={x.points}
                 penality={x.penality}
+                data={x}
               />
             ))}
           </ol>
@@ -150,6 +153,7 @@ const Home: NextPage = () => {
                 title={getTitle(x.id)}
                 points={x.points}
                 penality={x.penality}
+                data={x}
               />
             ))}
           </ol>

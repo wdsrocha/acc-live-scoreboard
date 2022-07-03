@@ -1,5 +1,12 @@
 import { t } from "./utils";
 
+interface User {
+  name: string;
+  school?: string;
+  company?: string;
+  begin?: number;
+}
+
 export interface Data {
   contestId: number;
   rounds?: {
@@ -8,93 +15,130 @@ export interface Data {
     participants: number[];
   }[];
   users: {
-    [key: number]: {
-      name: string;
-      school?: string;
-      company?: string;
-      isHighSchooler?: boolean;
-      isFemale?: boolean;
-      begin: number;
-    };
+    [key: number]: User;
+  };
+  pastUsers?: {
+    [key: number]: User;
   };
 }
 
 export const data: Data = {
-  contestId: 1358,
+  contestId: 1359,
   users: {
-    1: {
-      name: "Luano Cesas Barros dos Santos",
-      begin: t("00:55:00"),
-    },
-    2: {
-      name: "Iranildo Batalha",
-      school: "UEA",
-      begin: t("03:30:00"),
-    },
-    4: {
-      name: "Ricardo Coutinho II",
-      school: "UFAM",
-      begin: t("02:36:00"),
-    },
-    5: {
-      name: "Eduardo Peres",
-      school: "UEA",
-      begin: t("00:55:00"),
-    },
-    6: {
-      name: "Thaissa Silva",
-      school: "FMM",
-      begin: t("03:04:00"),
-    },
-    8: {
-      name: "Fernando Vítor Ventilari Neder",
-      school: "UFAM",
-      begin: t("00:00:00"),
-    },
     10: {
-      name: "Jônatas Lima Magalhães de Azevedo",
+      name: "Fernando Ventilari",
       school: "UFAM",
-      begin: t("00:00:00"),
+      begin: t("00:05:00"),
     },
     11: {
-      name: "Rodrigo Queiroz",
-      school: "UFAM",
-      begin: t("01:55:00"),
-    },
-    12: {
-      name: "Gabriel dos Santos Batista",
-      school: "UEA",
-      begin: t("03:29:00"),
+      name: "Hélio Fernandes Schineider",
+      school: "Anhanguera",
+      begin: t("00:05:00"),
     },
     13: {
-      name: "Raquel Folz",
-      school: "UFAM",
-      begin: t("02:45:00"),
-    },
-    14: {
-      name: "Thailsson Clementino",
-      school: "UFAM",
-      begin: t("00:00:00"),
-    },
-    15: {
-      name: "Guilherme Pantoja Martins",
-      school: "FMM",
-      begin: t("03:03:00"),
+      name: "Diogo Roberto Duarte da Costa",
+      school: "UEA",
+      begin: t("00:05:00"),
     },
     18: {
-      name: "Alexandre da Silva Tupinambá",
+      name: "Raquel Folz",
       school: "UFAM",
-      begin: t("00:00:00"),
+      begin: t("00:05:00"),
+    },
+    1: {
+      name: "Lucas Fernandes de Oliveira",
+      school: "UFAM",
+      begin: t("00:05:00"),
+    },
+    20: {
+      name: "Igor Correa",
+      school: "Anhanguera",
+      begin: t("00:05:00"),
     },
     21: {
-      name: "Erick Monteiro",
-      school: "UEA",
-      begin: t("03:10:00"),
+      name: "Raycon Lima",
+      school: "Batista	",
+      begin: t("00:05:00"),
+    },
+    22: {
+      name: "Lucas Marques Cardenas",
+      school: "INDT",
+      begin: t("00:52:00"),
+    },
+    23: {
+      name: "Lucas Castro",
+      school: "UFAM",
+      begin: t("01:48:00"),
     },
     24: {
-      name: "João Victor Souza",
+      name: "Thailsson Clementino",
+      school: "UFAM",
+      begin: t("00:05:00"),
+    },
+    26: {
+      name: "Rayssa Carla",
+      school: "Fametro",
+      begin: t("02:29:00"),
+    },
+    27: {
+      name: "João Victor",
       school: "UEA",
-      begin: t("03:47:00"),
+      begin: t("02:37:00"),
+    },
+    28: {
+      name: "Carlos Júnior",
+      school: "UFAM",
+      begin: t("02:50:00"),
+    },
+    2: {
+      name: "José Abel",
+      school: "UFRS",
+      begin: t("01:33:00"),
+    },
+    3: {
+      name: "Leonardo Santos",
+      school: "UFAM",
+      begin: t("00:05:00"),
+    },
+    4: {
+      name: "Guilherme Duarte",
+      school: "UFAM",
+      begin: t("00:05:00"),
+    },
+    5: {
+      name: "Jackson Fernandes",
+      school: "UFAM",
+      begin: t("00:56:00"),
+    },
+    6: {
+      name: "Alexandre da Silva Tupinambá",
+      school: "UFAM",
+      begin: t("00:05:00"),
+    },
+    7: {
+      name: "Jônatas Lima",
+      school: "UFAM",
+      begin: t("00:05:00"),
+    },
+    8: {
+      name: "Eduardo Peres",
+      school: "UEA",
+      begin: t("01:41:00"),
+    },
+    9: {
+      name: "Natanael Bezerra de Oliveira",
+      school: "UFAM",
+      begin: t("00:05:00"),
+    },
+    29: {
+      name: "Saimon Tavares",
+      school: "UFAM",
+      begin: t("02:58:00"),
+    },
+    31: {
+      name: "Thalisson Costa",
+      school: "UFAM",
+      begin: t("04:00:00"),
     },
   },
 };

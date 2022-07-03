@@ -2,18 +2,25 @@
 /* eslint-disable @next/next/no-img-element */
 import type { NextPage } from "next";
 import { useEffect, useState } from "react";
+import { ScoreboardRow } from "../components/ScoreboardRow";
 import { useInterval } from "../hooks/useInterval";
 import { data } from "../lib/config";
 import { neps, ScoreBoard } from "../lib/neps";
+import { SCOREBOARD_UPDATE_INTERVAL } from "../lib/utils";
 
 const { users } = data;
 
 const Home: NextPage = () => {
   const [scoreBoard, setScoreBoard] = useState<ScoreBoard | undefined>();
 
-  const ranking = scoreBoard?.scores
+  const ranking: Row[] | undefined = scoreBoard?.scores
     .filter((score) => {
       const id = Number(score.user.name.split(" ")[1]);
+
+      if (!(id in users) && score.total.points) {
+        console.error(`Usuário "${id}" não foi cadastrado!`);
+      }
+
       return id in users;
     })
     .map((score) => {
@@ -25,52 +32,15 @@ const Home: NextPage = () => {
           return (
             penality +
             problem.timestamp -
-            users?.[id]?.begin +
+            (users?.[id]?.begin ?? 0) +
             (problem.attempts - 1) * 20
           );
-          // We should check for cheat attempts here:
-          // 1. What should happen if a submission is before the first round?
-          // 2. How about submissions between rounds?
-          // 3. And what if the participant isn't in this round?
-          // See the comment below for the solution of (1) and (2)
-
-          // let ts = problem.timestamp;
-          // let elapsedTime = 0;
-
-          // rounds.forEach((round, index) => {
-          // Checks if this submission was made after the end of the last
-          // round. If true, pretend that the submission was made right on the
-          // start of the current round.
-
-          // const INF = 999_999_999;
-          // This will work as long as ONLY the last round don't have an end
-          //   const end = round.end ?? INF;
-
-          //   if (
-          //     index - 1 >= 0 &&
-          //     (rounds[index - 1]?.end ?? INF) < ts &&
-          //     ts <= round.begin
-          //   ) {
-          //     ts = round.begin;
-          //   }
-
-          //   if (round.begin <= ts && ts <= (round.end ?? INF)) {
-          //     ts = ts - round.begin + elapsedTime;
-          //   }
-
-          //   if (id in round.participants) {
-          //     elapsedTime += end - round.begin;
-          //   }
-          // });
-
-          // return penality + ts + (problem.attempts - 1) * 20;
         }, 0);
 
       const name = users?.[id]?.name;
 
       return {
         id,
-        nepsId: score.user.id,
         name,
         points: score.total.points,
         penality: customPenality,
@@ -104,40 +74,9 @@ const Home: NextPage = () => {
 
   useInterval(() => {
     updateNepsScoreBoard();
-  }, 5000);
+  }, SCOREBOARD_UPDATE_INTERVAL);
 
   const ICON_SIZE = 150;
-
-  function Position({
-    position,
-    key,
-    title,
-  }: {
-    title: string;
-    position: number;
-    key: number;
-  }) {
-    const positionFontColor = position < 3 ? "text-green-800" : "text-white";
-    const titleFontColor = position < 3 ? "text-white" : "text-green-800";
-    return (
-      <li key={key} className="flex items-center justify-begin">
-        <span
-          className={`default-font absolute font-bold text-4xl ${positionFontColor}`}
-        >
-          {position + 1}º
-        </span>
-        <span
-          className={`default-font absolute ml-24 font-bold text-xl ${titleFontColor}`}
-        >
-          {title}
-        </span>
-        <img
-          src={`/images/user_${position < 3 ? "top3" : "normal"}.png`}
-          width={600}
-        />
-      </li>
-    );
-  }
 
   function getTitle(id: number) {
     const { name, company, school } = users[id];
@@ -154,22 +93,40 @@ const Home: NextPage = () => {
   return (
     <main className="bg-[url('/images/bg.jpg')] min-h-screen">
       <div className="mx-auto w-full max-w-7xl min-h-screen">
-        <div className="flex items-center justify-around">
-          <span className=" text-4xl default-font text-white">RANK</span>
+        <div className="flex items-center justify-around -mt-16">
+          <span className="text-4xl default-font text-white">RANK</span>
           <img src="/images/title.png" width={600} />
           <img src="/images/logo_main.png" width={120} />
         </div>
         <div className="flex items-begin justify-around -mt-12">
-          <ol>
-            {ranking?.slice(0, 5).map((x, i) => (
-              <Position key={i} position={i} title={getTitle(x.id)} />
-            ))}
-          </ol>
-          <ol>
-            {ranking?.slice(5, 10).map((x, i) => (
-              <Position key={i} position={i + 5} title={getTitle(x.id)} />
-            ))}
-          </ol>
+          {ranking?.length ? (
+            <>
+              <ol>
+                {ranking?.slice(0, 5).map((x, i) => (
+                  <ScoreboardRow
+                    key={i}
+                    position={i + 1}
+                    title={getTitle(x.id)}
+                    data={x}
+                  />
+                ))}
+              </ol>
+              <ol>
+                {ranking?.slice(5, 10).map((x, i) => (
+                  <ScoreboardRow
+                    key={i}
+                    position={i + 6}
+                    title={getTitle(x.id)}
+                    data={x}
+                  />
+                ))}
+              </ol>
+            </>
+          ) : (
+            <span className="default-font text-white text-4xl my-32">
+              Carregando...
+            </span>
+          )}
         </div>
         <div className="flex items-center justify-between mx-64 mt-16">
           <img src="/images/logo_eldorado.png" width={ICON_SIZE} />
@@ -177,6 +134,17 @@ const Home: NextPage = () => {
           <img src="/images/logo_sidia.png" width={ICON_SIZE} />
           <img src="/images/logo_polo_digital.png" width={ICON_SIZE} />
         </div>
+      </div>
+      <div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
       </div>
     </main>
   );
