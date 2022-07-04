@@ -1,0 +1,392 @@
+{
+  "exercises": [
+    ["A", 2086, "Estrutura de dados TTRS"],
+    ["B", 2087, "Eficiência energética"],
+    ["C", 2085, "Toadas populares"],
+    ["D", 2089, "Controle de preços no PIM/PDM"],
+    ["E", 2090, "Contágio e imunização"],
+    ["F", 2088, "Projetando placas CI"]
+  ],
+  "scores": [
+    {
+      "position": 1,
+      "problems": [
+        [20, 1, "0:56:25", "PARTIAL"],
+        [100, 2, "3:19:34", "ACCEPTED"],
+        [100, 1, "0:39:15", "ACCEPTED"],
+        [100, 2, "0:28:24", "ACCEPTED"],
+        [7, 1, "1:09:01", "PARTIAL"],
+        [92, 2, "4:44:43", "PARTIAL"]
+      ],
+      "total": [419, 44242],
+      "type": "user",
+      "user": {
+        "color": "grey",
+        "id": 21631,
+        "is_pro": false,
+        "name": "Competitor 13 [Amazon Code]"
+      }
+    },
+    {
+      "position": 2,
+      "problems": [
+        [60, 1, "3:43:17", "PARTIAL"],
+        [61, 1, "2:32:44", "PARTIAL"],
+        [100, 3, "2:12:11", "ACCEPTED"],
+        [100, 2, "2:19:35", "ACCEPTED"],
+        [18, 4, "4:21:58", "PARTIAL"],
+        [39, 1, "3:15:33", "PARTIAL"]
+      ],
+      "total": [378, 73518],
+      "type": "user",
+      "user": {
+        "color": "grey",
+        "id": 21641,
+        "is_pro": false,
+        "name": "Competitor 23 [Amazon Code]"
+      }
+    },
+    {
+      "position": 3,
+      "problems": [
+        [20, 2, "4:54:53", "PARTIAL"],
+        [45, 1, "2:06:13", "PARTIAL"],
+        [100, 2, "1:57:38", "ACCEPTED"],
+        [100, 1, "1:44:59", "ACCEPTED"],
+        [47, 2, "4:38:05", "PARTIAL"],
+        [41, 1, "4:45:16", "PARTIAL"]
+      ],
+      "total": [353, 76024],
+      "type": "user",
+      "user": {
+        "color": "grey",
+        "id": 21626,
+        "is_pro": false,
+        "name": "Competitor 8 [Amazon Code]"
+      }
+    },
+    {
+      "position": 4,
+      "problems": [
+        [60, 1, "4:16:57", "PARTIAL"],
+        [52, 2, "2:46:16", "PARTIAL"],
+        [100, 3, "1:40:08", "ACCEPTED"],
+        [100, 2, "1:15:02", "ACCEPTED"],
+        [0, 0, 0, "NO TRIED"],
+        [12, 1, "3:38:18", "PARTIAL"]
+      ],
+      "total": [324, 53801],
+      "type": "user",
+      "user": {
+        "color": "grey",
+        "id": 21636,
+        "is_pro": false,
+        "name": "Competitor 18 [Amazon Code]"
+      }
+    },
+    {
+      "position": 5,
+      "problems": [
+        [0, 0, 0, "NO TRIED"],
+        [50, 1, "3:17:41", "PARTIAL"],
+        [100, 4, "3:11:41", "ACCEPTED"],
+        [100, 2, "0:31:07", "ACCEPTED"],
+        [0, 0, 0, "NO TRIED"],
+        [12, 1, "4:34:02", "PARTIAL"]
+      ],
+      "total": [262, 46471],
+      "type": "user",
+      "user": {
+        "color": "grey",
+        "id": 21628,
+        "is_pro": false,
+        "name": "Competitor 10 [Amazon Code]"
+      }
+    },
+    {
+      "position": 6,
+      "problems": [
+        [0, 0, 0, "NO TRIED"],
+        [61, 2, "2:15:44", "PARTIAL"],
+        [100, 3, "1:31:13", "ACCEPTED"],
+        [100, 2, "0:55:51", "ACCEPTED"],
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"]
+      ],
+      "total": [261, 21768],
+      "type": "user",
+      "user": {
+        "color": "grey",
+        "id": 21642,
+        "is_pro": false,
+        "name": "Competitor 24 [Amazon Code]"
+      }
+    },
+    {
+      "position": 7,
+      "problems": [
+        [0, 0, 0, "NO TRIED"],
+        [30, 1, "2:48:37", "PARTIAL"],
+        [100, 3, "2:22:05", "ACCEPTED"],
+        [100, 2, "1:59:59", "ACCEPTED"],
+        [7, 2, "4:28:45", "PARTIAL"],
+        [0, 0, 0, "NO TRIED"]
+      ],
+      "total": [237, 46766],
+      "type": "user",
+      "user": {
+        "color": "grey",
+        "id": 21623,
+        "is_pro": false,
+        "name": "Competitor 5 [Amazon Code]"
+      }
+    },
+    {
+      "position": 8,
+      "problems": [
+        [20, 1, "4:32:19", "PARTIAL"],
+        [30, 1, "1:07:56", "PARTIAL"],
+        [66, 2, "2:49:53", "PARTIAL"],
+        [100, 3, "0:28:22", "ACCEPTED"],
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"]
+      ],
+      "total": [216, 35910],
+      "type": "user",
+      "user": {
+        "color": "grey",
+        "id": 21625,
+        "is_pro": false,
+        "name": "Competitor 7 [Amazon Code]"
+      }
+    },
+    {
+      "position": 9,
+      "problems": [
+        [0, 2, "0:00:00", "WRONG"],
+        [38, 2, "4:12:46", "PARTIAL"],
+        [66, 2, "3:46:31", "PARTIAL"],
+        [100, 5, "3:04:07", "ACCEPTED"],
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"]
+      ],
+      "total": [204, 47004],
+      "type": "user",
+      "user": {
+        "color": "grey",
+        "id": 21645,
+        "is_pro": false,
+        "name": "Competitor 27 [Amazon Code]"
+      }
+    },
+    {
+      "position": 10,
+      "problems": [
+        [0, 0, 0, "NO TRIED"],
+        [69, 3, "3:45:49", "PARTIAL"],
+        [66, 2, "4:42:07", "PARTIAL"],
+        [25, 1, "1:07:01", "PARTIAL"],
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"]
+      ],
+      "total": [160, 38097],
+      "type": "user",
+      "user": {
+        "color": "grey",
+        "id": 21624,
+        "is_pro": false,
+        "name": "Competitor 6 [Amazon Code]"
+      }
+    },
+    {
+      "position": 11,
+      "problems": [
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"],
+        [25, 1, "4:11:58", "PARTIAL"],
+        [100, 1, "3:43:54", "ACCEPTED"],
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"]
+      ],
+      "total": [125, 28552],
+      "type": "user",
+      "user": {
+        "color": "grey",
+        "id": 21647,
+        "is_pro": false,
+        "name": "Competitor 29 [Amazon Code]"
+      }
+    },
+    {
+      "position": 12,
+      "problems": [
+        [20, 1, "3:56:10", "PARTIAL"],
+        [38, 2, "0:31:20", "PARTIAL"],
+        [16, 2, "2:01:37", "PARTIAL"],
+        [25, 1, "0:40:34", "PARTIAL"],
+        [0, 0, 0, "NO TRIED"],
+        [2, 2, "4:45:52", "PARTIAL"]
+      ],
+      "total": [101, 46533],
+      "type": "user",
+      "user": {
+        "color": "grey",
+        "id": 21619,
+        "is_pro": false,
+        "name": "Competitor 1 [Amazon Code]"
+      }
+    },
+    {
+      "position": 13,
+      "problems": [
+        [0, 0, 0, "NO TRIED"],
+        [25, 1, "1:35:19", "PARTIAL"],
+        [50, 2, "1:11:20", "PARTIAL"],
+        [25, 1, "0:30:02", "PARTIAL"],
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"]
+      ],
+      "total": [100, 13001],
+      "type": "user",
+      "user": {
+        "color": "grey",
+        "id": 21627,
+        "is_pro": false,
+        "name": "Competitor 9 [Amazon Code]"
+      }
+    },
+    {
+      "position": 14,
+      "problems": [
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"],
+        [58, 2, "4:20:59", "PARTIAL"],
+        [25, 1, "2:15:08", "PARTIAL"],
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"]
+      ],
+      "total": [83, 24967],
+      "type": "user",
+      "user": {
+        "color": "grey",
+        "id": 21620,
+        "is_pro": false,
+        "name": "Competitor 2 [Amazon Code]"
+      }
+    },
+    {
+      "position": 15,
+      "problems": [
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"],
+        [25, 3, "1:16:09", "PARTIAL"],
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"]
+      ],
+      "total": [25, 6969],
+      "type": "user",
+      "user": {
+        "color": "grey",
+        "id": 21621,
+        "is_pro": false,
+        "name": "Competitor 3 [Amazon Code]"
+      }
+    },
+    {
+      "position": 16,
+      "problems": [
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"]
+      ],
+      "total": [0, 0],
+      "type": "user",
+      "user": {
+        "color": "grey",
+        "id": 21622,
+        "is_pro": false,
+        "name": "Competitor 4 [Amazon Code]"
+      }
+    },
+    {
+      "position": 17,
+      "problems": [
+        [0, 2, "0:00:00", "WRONG"],
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"]
+      ],
+      "total": [0, 0],
+      "type": "user",
+      "user": {
+        "color": "grey",
+        "id": 21629,
+        "is_pro": false,
+        "name": "Competitor 11 [Amazon Code]"
+      }
+    },
+    {
+      "position": 18,
+      "problems": [
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"]
+      ],
+      "total": [0, 0],
+      "type": "user",
+      "user": {
+        "color": "grey",
+        "id": 21630,
+        "is_pro": false,
+        "name": "Competitor 12 [Amazon Code]"
+      }
+    },
+    {
+      "position": 19,
+      "problems": [
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"]
+      ],
+      "total": [0, 0],
+      "type": "user",
+      "user": {
+        "color": "grey",
+        "id": 21632,
+        "is_pro": false,
+        "name": "Competitor 14 [Amazon Code]"
+      }
+    },
+    {
+      "position": 20,
+      "problems": [
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"],
+        [0, 0, 0, "NO TRIED"]
+      ],
+      "total": [0, 0],
+      "type": "user",
+      "user": {
+        "color": "grey",
+        "id": 21633,
+        "is_pro": false,
+        "name": "Competitor 15 [Amazon Code]"
+      }
+    }
+  ]
+}
