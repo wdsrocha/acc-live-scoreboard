@@ -6,6 +6,16 @@ The competition was hosted at <https://neps.academy>. This app uses Neps API and
 
 The [backup](/backup/) directory contains the response from the scores route of Neps API after the contests were over, just in case we ever lose access to the API.
 
+## Competition Results
+
+Day 1
+
+![Results day 1](/docs/images/amazon_code_challenge_results_day_1.png)
+
+Day 2
+
+![Results day 1](/docs/images/amazon_code_challenge_results_day_2.png)
+
 ## Development
 
 First, run the development server:
