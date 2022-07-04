@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Position } from "../components/Position";
+import { Position } from "./Position";
 import { useInterval } from "../hooks/useInterval";
 import { neps, ScoreBoard as ScoreBoardType } from "../lib/neps";
 import { SCOREBOARD_UPDATE_INTERVAL } from "../lib/utils";
