@@ -1,37 +1,35 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 
-export function ScoreboardRow({
+import { Row } from "../typings/types";
+
+export function Position({
   position,
-  key,
   title,
   data,
 }: {
   title: string;
   position: number;
-  key: number;
   data: Row;
 }) {
-  const { points, penality } = data;
-  const positionFontColor = position <= 3 ? "text-green-800" : "text-white";
-  const titleFontColor = position <= 3 ? "text-white" : "text-green-800";
+  const { points } = data;
+  const positionFontColor = position <= 3 ? "text-green-700" : "text-white";
+  const titleFontColor = position <= 3 ? "text-white" : "text-green-700";
   return (
-    <li key={key} className="flex items-center justify-begin">
+    <li className="flex items-center justify-begin">
       <span
-        className={`default-font ${
+        className={`${
           position !== 10 ? "ml-3" : "ml-1"
         } mb-3 absolute font-bold text-4xl ${positionFontColor}`}
       >
         {position}º
       </span>
       <span
-        className={`default-font absolute ml-24 mb-6 font-bold text-xl ${titleFontColor}`}
+        className={`absolute ml-24 mb-6 font-bold text-xl ${titleFontColor}`}
       >
         {title}
       </span>
-      <span
-        className={`default-font text-sm  absolute ml-24 mt-6 ${titleFontColor}`}
-      >
+      <span className={`text-sm  absolute ml-24 mt-6 ${titleFontColor}`}>
         Pontuação: {points}
       </span>
       <img

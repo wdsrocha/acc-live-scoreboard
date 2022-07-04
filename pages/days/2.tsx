@@ -1,29 +1,14 @@
-import { t } from "./utils";
+import { NextPage } from "next";
+import React from "react";
+import { ScoreBoard } from "../../components/ScoreBoard";
+import { t } from "../../lib/utils";
+import { Setup } from "../../typings/types";
 
-interface User {
-  name: string;
-  school?: string;
-  company?: string;
-  begin?: number;
-}
-
-export interface Data {
-  contestId: number;
-  rounds?: {
-    begin: number;
-    end?: number;
-    participants: number[];
-  }[];
-  users: {
-    [key: number]: User;
-  };
-  pastUsers?: {
-    [key: number]: User;
-  };
-}
-
-export const data: Data = {
-  contestId: 1359,
+export const setup: Setup = {
+  contest: {
+    id: 1359,
+    isOver: true,
+  },
   users: {
     10: {
       name: "Fernando Ventilari",
@@ -142,3 +127,9 @@ export const data: Data = {
     },
   },
 };
+
+const Page: NextPage = () => {
+  return <ScoreBoard setup={setup} />;
+};
+
+export default Page;

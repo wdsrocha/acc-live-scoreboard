@@ -1,14 +1,14 @@
-# Amazon Coding Challenge - Live Scoreboard
+# Amazon Coding Challenge - Live ScoreBoard
 
-Live Scoreboard for a coding competition.
+Live ScoreBoard for the Amazon Coding Challenge competition.
+
+The competition was hosted at <https://neps.academy>. This app uses NEPS API and ignores the penality of contestants that join late, based on a config file.
 
 ## Development
 
 First, run the development server:
 
 ```bash
-npm run dev
-# or
 yarn dev
 ```
 

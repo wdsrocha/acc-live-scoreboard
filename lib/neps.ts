@@ -133,23 +133,8 @@ class NepsClient {
   }
 
   async getScoreBoard(competitionId: number): Promise<ScoreBoard> {
+    // For now, we only care about the first page
     let rawScoreBoard = await this.getScoreBoardPage(competitionId, 1);
-
-    for (let page = 2; page < 3; page++) {
-      const partialRawScoreBoard = await this.getScoreBoardPage(
-        competitionId,
-        page
-      );
-
-      if (!partialRawScoreBoard.scores.length) {
-        break;
-      }
-
-      rawScoreBoard.scores = rawScoreBoard.scores.concat(
-        partialRawScoreBoard.scores
-      );
-    }
-
     return transformRawScoreBoard(rawScoreBoard);
   }
 }
